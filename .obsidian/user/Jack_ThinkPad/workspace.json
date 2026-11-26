@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "c37a8c03c829c9ad",
+        "id": "e92dcb28075bdce3",
         "type": "tabs",
         "children": [
           {
-            "id": "5aac46f614fae063",
+            "id": "e3a009690fc4a8d6",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": ".obsidian/workspace.json",
-                "bFile": ".obsidian/workspace.json",
-                "aRef": ""
+                "file": "NEB-VAL/Current projects.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: workspace.json  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "Current projects"
             }
           }
         ]
@@ -83,7 +83,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "73d46f1effc98ff4",
@@ -200,22 +201,33 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "5aac46f614fae063",
+  "active": "e3a009690fc4a8d6",
   "lastOpenFiles": [
+    "NEB-VAL/Current projects.md",
+    ".obsidian/workspace.json",
+    ".obsidian",
+    "MARKDOWN-tut/Templates/meeting-notes.md",
+    "MARKDOWN-tut/Templates/README.md",
+    "MARKDOWN-tut/Templates/2026-10-22.md",
+    "NEB-VAL/NOTES-COMMENTS/mace_md.md",
+    "MARKDOWN-tut/cheatsheet.md",
+    "MARKDOWN-tut/all-functions.md",
+    "MARKDOWN-tut/HOW_WORKS.md",
+    "MARKDOWN-tut/Templates",
+    "LAMMPS-DEGEN/README_run_pipeline.md",
+    "LAMMPS-DEGEN/README_analyze_run.md",
+    "MACE-TRAIN/README.md",
+    "NEB-VAL/NOTES-COMMENTS",
     "NOTES.md",
     "Index.md",
     "NEB-VAL",
+    "MARKDOWN-tut",
     "MACE-TRAIN",
     "LAMMPS-DEGEN",
-    ".obsidian/workspace.json",
     ".obsidian/community-plugins.json",
-    ".obsidian",
     ".obsidian/core-plugins.json",
-    ".obsidian/appearance.json",
-    ".obsidian/app.json",
     "Untitled.md",
     "Technical Debt/25-11-2026-Codeclippingtest.md",
-    "Technical Debt",
     "Pasted image 20261125123506.png"
   ]
 }
