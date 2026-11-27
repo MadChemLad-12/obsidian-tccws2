@@ -127,3 +127,15 @@ Production means metadynamics on one target Pt atom at a time, starting from the
 
 Budget at your speeds (about 17–19 h per ns per GPU): a surface with two walkers of 1.5 ns each is about a day of wall time on two GPUs. The whole project fits about 30–50 such surfaces at best, before replicas, so choose the grid with that in mind.
 
+## 27-11-2026 
+### How you'll know it's ready for production
+
+A condition is ready when all of these hold for that specific system:
+
+1. **Energy.** The last-quarter slope is consistent with zero (the verdict).
+2. **Structure.** `traj` shows no `*` for the metrics that matter: `pt_cn_mean`, `pt_c_contacts`, `n_Os_on_Pt`, `n_Ow_on_Pt`, and the proton-dissociation count.
+3. **Reproducibility.** A second independent packing (different seed) gives similar values. Nafion arrangement is a slow variable you haven't sampled, so one packing isn't evidence.
+4. **Model accuracy.** Set the CP2K acceptance criteria _before_ you see the results. My suggestion: force RMSE on Pt, O and S atoms no more than about 1.5 times your validation RMSE (about 0.09 eV/Å, so roughly 0.15 eV/Å), and energy differences between frames within a few meV/atom after removing a constant offset. These are my thresholds, not standards. If it fails, retrain with those frames first.
+5. **Pilot.** An unbiased PLUMED pilot of at least 20–50 ps on the equilibrated state, with stationary CVs, gives SIGMA.
+6. **Mechanics test.** One 100,000-step metadynamics run shows that the bias works and detachment is reachable and reversible.
+

@@ -68,6 +68,7 @@ python analyze_run.py log md.log [--nprod 4000000] [--dt-fs 0.5] [--out md]
 3. If you pass `--nprod N`, prints how long N production steps would take at the last measured speed.
 4. Plots temperature and potential energy for all blocks end to end.
 5. For the **last block** prints the mean ± sd of temperature over its second half and the **potential-energy drift** (last row minus first row of the block), also per atom and per ps when the atom count can be read from the log.
+6. Fits the potential energy with a straight line (on block averages) over the whole block, its second half and its **last quarter**, and prints the slope ± standard error in eV/ps and meV/atom per 100 ps. The `VERDICT (energy)` line says "consistent with zero" if the last-quarter slope is smaller than 2 standard errors, otherwise "still drifting". **Use this verdict, not the look of the plot**: a plot that spans the minimisation and heating, or a drift of ~10 meV/atom per 100 ps, can look flat by eye.
 
 **Output:** `<out>_thermo.png`, plus the printed lines.
 
